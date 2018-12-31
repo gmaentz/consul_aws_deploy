@@ -1,6 +1,5 @@
 #-------------AWS Region-----------
 
-
 #-------------VPC-----------
 resource "aws_vpc" "consul_vpc" {
   cidr_block           = "${var.vpc_cidr}"
@@ -11,6 +10,7 @@ resource "aws_vpc" "consul_vpc" {
     Name = "consul_vpc"
   }
 }
+
 #--------Avaialability Zones----
 data "aws_availability_zones" "available" {}
 
