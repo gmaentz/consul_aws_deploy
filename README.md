@@ -8,7 +8,7 @@ Pulling from several sources to do this.
 2. Utilize an AWS AutoScaling Group to deploy the AMI, with tags to run and create a cluster
 3. Deploy Changes using Terraform Enterprise
 
-## How to use this Module
+## Steps
 
 Each Module has the following folder structure:
 
