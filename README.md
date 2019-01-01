@@ -12,24 +12,17 @@ Pulling from several sources to do this.
 
 Each Module has the following folder structure:
 
-* [root](https://github.com/hashicorp/terraform-aws-consul/tree/master): This folder shows an example of Terraform code 
-  that uses the [consul-cluster](https://github.com/hashicorp/terraform-aws-consul/tree/master/modules/consul-cluster) 
+* [Examples on Blog](http://www.maentz.net/)
+* [Install Consul](http://www.maentz.net/)
+* [consul-cluster](https://github.com/hashicorp/terraform-aws-consul/tree/master/modules/consul-cluster) 
   module to deploy a [Consul](https://www.consul.io/) cluster in [AWS](https://aws.amazon.com/).
 * [modules](https://github.com/hashicorp/terraform-aws-consul/tree/master/modules): This folder contains the reusable code for this Module, broken down into one or more modules.
-* [examples](https://github.com/hashicorp/terraform-aws-consul/tree/master/examples): This folder contains examples of how to use the modules.
 * [test](https://github.com/hashicorp/terraform-aws-consul/tree/master/test): Automated tests for the modules and examples.
 
 To deploy Consul servers using this Module:
 
 1. Create a Consul AMI using a Packer template that references the [install-consul module](https://github.com/hashicorp/terraform-aws-consul/tree/master/modules/install-consul).
    Here is an [example Packer template](https://github.com/hashicorp/terraform-aws-consul/tree/master/examples/consul-ami#quick-start). 
-   
-   If you are just experimenting with this Module, you may find it more convenient to use one of our official public AMIs:
-   - [Latest Ubuntu 16 AMIs](https://github.com/hashicorp/terraform-aws-consul/tree/master/_docs/ubuntu16-ami-list.md).
-   - [Latest Amazon Linux AMIs](https://github.com/hashicorp/terraform-aws-consul/tree/master/_docs/amazon-linux-ami-list.md).
-  
-    **WARNING! Do NOT use these AMIs in your production setup. In production, you should build your own AMIs in your own 
-    AWS account.**
    
 1. Deploy that AMI across an Auto Scaling Group using the Terraform [consul-cluster module](https://github.com/hashicorp/terraform-aws-consul/tree/master/modules/consul-cluster) 
    and execute the [run-consul script](https://github.com/hashicorp/terraform-aws-consul/tree/master/modules/run-consul) with the `--server` flag during boot on each 
