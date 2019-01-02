@@ -1,4 +1,7 @@
-#-------------AWS Region-----------
+#-------------Region-----------
+provider "aws" {
+  region = "${var.aws_region}"
+}
 
 #-------------VPC-----------
 resource "aws_vpc" "consul_vpc" {
