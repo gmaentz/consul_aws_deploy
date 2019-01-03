@@ -12,7 +12,7 @@ variable "cidrs" {
 }
 
 variable "bastion_ami" {
-  description = "AMI with Consul Binaries installed"
+  description = "AMI for Bastion host"
 }
 
 variable "bastion_instance_type" {
@@ -25,4 +25,12 @@ variable "localip" {
 
 variable "bastion_key_name" {
   description = "key to use for connecting to bastion host"
+}
+
+variable "consul_ami" {
+  description = "AMI with Consul Binaries installed"
+}
+
+variable "consul_instance_type" {
+  description = "EC2 Instance Type for Consul Servers"
 }
