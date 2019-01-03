@@ -7,6 +7,3 @@
 
 # .tfvars files
 *.tfvars
-
-# .tfpl files
-*.tfpl
