@@ -1,7 +1,5 @@
-#-------------Region-----------
-provider "aws" {
-  region = "${var.aws_region}"
-}
+#-------------AWS Region-----------
+
 
 #-------------VPC-----------
 resource "aws_vpc" "consul_vpc" {
@@ -13,7 +11,6 @@ resource "aws_vpc" "consul_vpc" {
     Name = "consul_vpc"
   }
 }
-
 #--------Avaialability Zones----
 data "aws_availability_zones" "available" {}
 
